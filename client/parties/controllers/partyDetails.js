@@ -1,6 +1,7 @@
-angular.module("socially").controller("PartyDetailsCtrl", ['$scope', '$stateParams', '$meteor',
-  function($scope, $stateParams, $meteor){
+angular.module("socially").controller("PartyDetailsCtrl", ['$scope', '$stateParams',
+  function($scope, $stateParams){
 
-    $scope.party = $meteor.object(Parties, $stateParams.partyId);
+    $scope.party = {'name': 'Dubstep-Free Zone',
+      'description': 'Fast just got faster with Nexus S.'};
 
 }]);

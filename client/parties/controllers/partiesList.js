@@ -1,7 +1,14 @@
-angular.module("socially").controller("PartiesListCtrl", ['$scope', '$meteor',
-  function($scope, $meteor){
+angular.module("socially").controller("PartiesListCtrl", ['$scope',
+  function($scope){
 
-    $scope.parties = $meteor.collection(Parties);
+    $scope.parties = [
+      {'name': 'Dubstep-Free Zone',
+        'description': 'Fast just got faster with Nexus S.'},
+      {'name': 'All dubstep all the time',
+        'description': 'Get it on!'},
+      {'name': 'Savage lounging',
+        'description': 'Leisure suit required. And only fiercest manners.'}
+    ];
 
     $scope.remove = function(party){
       $scope.parties.splice( $scope.parties.indexOf(party), 1 );
